@@ -33,3 +33,9 @@ jobs:
         #  tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
         #  platforms: linux/amd64,linux/arm64
         # 
+      - name: push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+          platforms: linux/amd64,linux/arm64
