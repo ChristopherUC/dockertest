@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
-FROM --platform=linux/amd64 busybox:latest
+ARG arch
+FROM --platform=linux/${arch} busybox:latest
 COPY --chmod=755 <<EOF /app/run.sh
 #!/bin/sh
 while true; do
