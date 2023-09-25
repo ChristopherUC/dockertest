@@ -9,7 +9,7 @@
 # https://github.com/docker/awesome-compose
 services:
   server:
-    platform: linux/amd64
+    platform: linux/x86_64
     build:
       context: .
     ports:
